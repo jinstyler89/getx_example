@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
+class LoaclAppbarController extends GetxController {
+  final String viewTitle = Get.arguments["title"] ?? "no title name";
+
   // @override
   // void onInit() {
   //   super.onInit();
