@@ -1,21 +1,21 @@
 import 'package:get/get.dart';
-import 'package:getx_example/app/modules/material_color/bindings/material_color_binding.dart';
-import 'package:getx_example/app/modules/material_color/views/material_color_view.dart';
+import 'package:getx_example/app/modules/theme/theme_list/material_color/bindings/material_color_binding.dart';
+import 'package:getx_example/app/modules/theme/theme_list/material_color/views/material_color_view.dart';
 
-import '../modules/color_scheme/bindings/color_scheme_binding.dart';
-import '../modules/color_scheme/views/color_scheme_view.dart';
+import '../modules/theme/theme_list/color_scheme/bindings/color_scheme_binding.dart';
+import '../modules/theme/theme_list/color_scheme/views/color_scheme_view.dart';
 import '../modules/dio/bindings/dio_binding.dart';
 import '../modules/dio/views/dio_view.dart';
 import '../modules/example_list/bindings/example_list_binding.dart';
 import '../modules/example_list/views/example_list_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
-import '../modules/loacl_appbar/bindings/loacl_appbar_binding.dart';
-import '../modules/loacl_appbar/views/loacl_appbar_view.dart';
+import '../modules/theme/theme_list/loacl_appbar/bindings/loacl_appbar_binding.dart';
+import '../modules/theme/theme_list/loacl_appbar/views/loacl_appbar_view.dart';
 import '../modules/theme/bindings/theme_binding.dart';
 import '../modules/theme/views/theme_view.dart';
-import '../modules/typography/bindings/typography_binding.dart';
-import '../modules/typography/views/typography_view.dart';
+import '../modules/theme/theme_list/typography/bindings/typography_binding.dart';
+import '../modules/theme/theme_list/typography/views/typography_view.dart';
 
 part 'app_routes.dart';
 
@@ -41,9 +41,14 @@ class AppPages {
       page: () => const DioView(),
       binding: DioBinding(),
     ),
+    // GetPage(
+    //   name: _Paths.THEME,
+    //   page: () => const ThemeView(),
+    //   binding: ThemeBinding(),
+    // ),
     GetPage(
       name: _Paths.THEME,
-      page: () => const ThemeView(),
+      page: () => const ThemePage(),
       binding: ThemeBinding(),
     ),
     GetPage(

@@ -6,56 +6,6 @@ import 'package:getx_example/app/services/global.dart';
 
 import '../controllers/theme_controller.dart';
 
-// class ThemePage extends GetView<ThemeController> {
-//   const ThemePage({Key? key}) : super(key: key);
-//   @override
-//   Widget build(BuildContext context) {
-//     //  使用局部自定义主题样式
-//     //  ThemeData theme = Get.theme;
-
-//     return
-//         // Theme(
-//         //     data: theme.copyWith(
-//         //       appBarTheme: theme.appBarTheme.copyWith(
-//         //         backgroundColor: theme.colorScheme.tertiary,
-//         //         titleTextStyle: theme.textTheme.titleMedium?.copyWith(
-//         //           color: Colors.white,
-//         //           fontSize: 30,
-//         //           fontWeight: FontWeight.bold,
-//         //         )
-//         //       ),
-//         //     ),
-//         Scaffold(
-//       appBar: AppBar(
-//         title: const Text('Material Design 3 规范'),
-//         centerTitle: true,
-//       ),
-//       body: Column(
-//         children: [
-//           const Center(
-//             child: Text(
-//               'ThemePage is working',
-//               style: TextStyle(fontSize: 20),
-//             ),
-//           ),
-//         ],
-//       ),
-//       floatingActionButton: Obx(() {
-//         return FloatingActionButton(
-//           onPressed: () {
-//             GlobalService.to.switchThemeModel();
-//           },
-//           child: Icon(
-//             GlobalService.to.isDarkModel == true
-//                 ? Icons.dark_mode
-//                 : Icons.light_mode,
-//           ),
-//         );
-//       }),
-//     );
-//   }
-// }
-
 class ThemePage extends StatefulWidget {
   const ThemePage({Key? key}) : super(key: key);
 
