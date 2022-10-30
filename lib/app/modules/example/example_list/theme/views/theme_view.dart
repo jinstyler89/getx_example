@@ -36,7 +36,10 @@ class ThemeView extends GetView<ThemeController> {
       id: "theme",
       builder: (_) {
         return Scaffold(
-          appBar: AppBar(title: const Text("Material Design 3 规范")),
+          appBar: AppBar(
+              title: const Text(
+            "Material Design 3 规范",
+          )),
           body: SafeArea(
             child: _buildView(),
           ),
@@ -73,7 +76,10 @@ class ThemeView extends GetView<ThemeController> {
   Widget _buildListItem(KeyValueModel<String> item) {
     return ListTile(
       onTap: () => controller.onToRouter(item),
-      title: Text(item.key),
+      title: Text(
+        item.key,
+        // style: Get.textTheme.labelLarge,
+      ),
     );
   }
 }

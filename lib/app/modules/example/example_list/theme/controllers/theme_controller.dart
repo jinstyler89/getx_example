@@ -13,7 +13,7 @@ class ThemeController extends GetxController {
       KeyValueModel<String>("AppBar 局部背景修改", Routes.LOACL_APPBAR),
     ]);
 
-    update(["theme"]);
+    // update(["theme"]);
   }
 
   void onTap() {}
@@ -27,16 +27,17 @@ class ThemeController extends GetxController {
     );
   }
 
-  // @override
-  // void onInit() {
-  //   super.onInit();
-  // }
-
   @override
-  void onReady() {
-    super.onReady();
+  void onInit() {
+    super.onInit();
     _initData();
   }
+
+  // @override
+  // void onReady() {
+  //   super.onReady();
+  //   _initData();
+  // }
 
   // @override
   // void onClose() {

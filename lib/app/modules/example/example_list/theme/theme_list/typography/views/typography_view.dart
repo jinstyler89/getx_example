@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:getx_example/app/common/values/color_schemes.g.dart';
+import 'package:getx_example/app/common/values/theme.dart';
 import 'package:getx_example/app/models/key_value_model.dart';
+import 'package:getx_example/app/services/global.dart';
 
 import '../controllers/typography_controller.dart';
 
@@ -14,6 +17,18 @@ class TypographyView extends GetView<TypographyController> {
       body: SafeArea(
         child: _buildView(),
       ),
+      floatingActionButton: Obx(() {
+        return FloatingActionButton(
+          onPressed: () {
+            GlobalService.to.switchThemeModel();
+          },
+          child: Icon(
+            GlobalService.to.isDarkModel == true
+                ? Icons.dark_mode
+                : Icons.light_mode,
+          ),
+        );
+      }),
     );
   }
 
